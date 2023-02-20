@@ -1,6 +1,6 @@
 package com.allianz.tech.meetingcalendar.service;
 
-import com.allianz.tech.meetingcalendar.model.Book;
+import com.allianz.tech.meetingcalendar.model.Booking;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
@@ -12,17 +12,17 @@ public class DefaultBookingService implements BookingService {
 
     private static final String UNKNOWN_OWNER = "Not yet implemented.";
     @Override
-    public Book book(Book book) {
-        return book;
+    public Booking add(Booking booking) {
+        return booking;
     }
 
     @Override
-    public List<Book> list() {
+    public List<Booking> getAllBookings() {
         return Collections.emptyList();
     }
 
     @Override
-    public List<String> avail() {
+    public List<String> getAllBookablePeriods() {
         return Collections.emptyList();
     }
 

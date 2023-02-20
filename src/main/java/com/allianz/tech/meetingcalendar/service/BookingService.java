@@ -1,16 +1,16 @@
 package com.allianz.tech.meetingcalendar.service;
 
-import com.allianz.tech.meetingcalendar.model.Book;
+import com.allianz.tech.meetingcalendar.model.Booking;
 
 import java.util.Date;
 import java.util.List;
 
 public interface BookingService {
-    Book book(Book book);
+    Booking add(Booking booking);
 
-    List<Book> list();
+    List<Booking> getAllBookings();
 
-    List<String> avail();
+    List<String> getAllBookablePeriods();
 
     String who(Date date);
 }

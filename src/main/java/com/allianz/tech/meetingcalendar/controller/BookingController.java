@@ -1,6 +1,6 @@
 package com.allianz.tech.meetingcalendar.controller;
 
-import com.allianz.tech.meetingcalendar.model.Book;
+import com.allianz.tech.meetingcalendar.model.Booking;
 import com.allianz.tech.meetingcalendar.service.BookingService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,18 +21,18 @@ public class BookingController {
     }
 
     @PostMapping("/book")
-    public Book book(Book book) {
-        return bookingService.book(book);
+    public Booking book(Booking booking) {
+        return bookingService.add(booking);
     }
 
     @GetMapping("/list")
-    public List<Book> list() {
-        return bookingService.list();
+    public List<Booking> list() {
+        return bookingService.getAllBookings();
     }
 
     @GetMapping("/avail")
     public List<String> avail() {
-        return bookingService.avail();
+        return bookingService.getAllBookablePeriods();
     }
 
     @GetMapping("/who")
